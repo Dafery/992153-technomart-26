@@ -10,7 +10,7 @@
   <header>
     <div>
       <div>
-        <a><img src="img/image/logo-technomart.svg" alt="Техномарт"></a>
+        <a><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
         <span>Поиск:</span>
         <div>
           <a href="#">Закладки: <span>0</span></a>
@@ -51,31 +51,31 @@
       <div>
         <span>New</span>
         <b>Материалы</b>
-        <a href="#">На любой вкус</a>
+        <a href="#" aria-label="Материалы">На любой вкус</a>
       </div>
       <div>
         <b>Инструмент</b>
-        <a href="#">На все случаи</a>
+        <a href="#" aria-label="Инструмент">На все случаи</a>
       </div>
       <div>
         <b>Техника</b>
-        <a href="#">Для стройки</a>
+        <a href="#" aria-label="Техника">Для стройки</a>
       </div>
       <div>
         <b>Скидки 50&#37;</b>
-        <a href="#">На 350 товаров</a>
+        <a href="#" aria-label="Скидки 50%">На 350 товаров</a>
       </div>
       <div>
         <b>Доставка</b>
-        <a href="#">Бесплатно</a>
+        <a href="#" aria-label="Доставка">Бесплатно</a>
       </div>
       <div>
         <!-- Слайдер -->
         <b>Дрели</b>
         <p>Соседям на радость!</p>
         <a href="catalog.html">Открыть каталог</a>
-        <button type="button"></button>
-        <button type="button"></button>
+        <button type="button" aria-label="Слайдер назад"></button>
+        <button type="button" aria-label="Слайдер вперёд"></button>
       </div>
     </div>
     <section>
@@ -184,7 +184,9 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, <br> заехав в наш офис:</p>
         <div>
-          <img src="img/image/map.png" width="300" height="158" alt="г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8">
+          <button type="button">
+            <img src="img/image/map.png" width="300" height="158" alt="г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8">
+          </button>
         </div>
         <a href="#">Заблудились? Напишите нам!</a>
       </section>
@@ -194,7 +196,7 @@
     <div>
       <div>
         <div>
-          <a><img src="img/image/logo-technomart.svg" alt="Техномарт"></a>
+          <a><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
           <p>г.Санкт-Петербург, ул.Б.Конюшенная, д.19&#47;8</p>
           <a href="tel:+78125550555">&#43;7 (812) 555-05-55</a>
         </div>
@@ -217,7 +219,7 @@
       <div>
         <p>&#64;2010–2019 Компания &#171;Техномарт&#187;<br> Все права защищены</p>
         <ul>
-          <li><a href="#">В контакте</a></li>
+          <li><a href="#">Вконтакте</a></li>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Instagram</a></li>
         </ul>
@@ -232,6 +234,32 @@
       </div>
     </div>
   </footer>
+
+  <div>
+    <img src="img/image/map-popup.png" width="1736" height="779" alt="г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8">
+    <button type="button" aria-label="Закрыть"></button>
+  </div>
+
+  <div>
+    <form method="POST" action="#">
+      <p>
+        <label for="user-name">Ваше имя:</label>
+        <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="email">Ваш e-mail:</label>
+        <input type="text" id="email" name="email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="user-text">Текст письма:</label>
+        <input type="text" id="user-text" name="user-text" placeholder="В свободной форме">
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
+    <div>
+      <button type="button" aria-label="Закрыть"></button>
+    </div>
+  </div>
 </body>
 
 </html>

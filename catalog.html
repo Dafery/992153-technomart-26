@@ -10,7 +10,7 @@
   <header>
     <div>
       <div>
-        <a><img src="img/image/logo-technomart.svg" alt="Техномарт"></a>
+        <a><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
         <span>Поиск:</span>
         <div>
           <a href="#">Закладки: <span>0</span></a>
@@ -33,9 +33,7 @@
         <div>
           <div>
             <a href="#">Равшан Джамшутович</a>
-            <a href="#">
-              <!--Выход из профиля-->
-            </a>
+            <a href="#" aria-label="Выход из профиля"></a>
           </div>
           <div>
             <a href="">Мои заказы</a>
@@ -62,9 +60,7 @@
     <section>
       <ul>
         <li>
-          <a href="#">
-            <!--Главная-->
-          </a>
+          <a href="#" aria-label="Главная"></a>
         </li>
         <li><a href="#">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
@@ -74,59 +70,67 @@
         <h1>Перфораторы</h1>
       </div>
       <section>
+        <h2 class="visually-hidden">Фильтр</h2>
         <span>Фильтр:</span>
-        <form action="#" method="post">
+        <form action="#" method="GET">
           <fieldset>
-            <h2>Цена:</h2>
-            <input type="range" min="0" max="30000" step="1" value="25000">
+            <legend>Цена:</legend>
+            <input type="range" min="0" max="30000" step="1" value="25000" aria-label="Ползунок цены">
             <div>
-              <input type="number" value="0"> &#8211;
-              <input type="number" value="30000">
+              <input type="number" value="0" aria-label="Минимальная цена"> &#8211;
+              <input type="number" value="30000" aria-label="Максимальная цена">
             </div>
           </fieldset>
           <fieldset>
-            <h2>Производители:</h2>
+            <legend>Производители:</legend>
             <ul>
               <li>
-                <input type="checkbox" id="bosch" checked>
-                <label for="bosch">Bosch</label>
+                <label>
+                  <input type="checkbox" name="bosch" checked>Bosch
+                </label>
               </li>
               <li>
-                <input type="checkbox" id="interscol">
-                <label for="interscol">Интерскол</label>
+                <label>
+                  <input type="checkbox" name="interscol">Интерскол
+                </label>
               </li>
               <li>
-                <input type="checkbox" id="makita" checked>
-                <label for="makita">Makita</label>
+                <label>
+                  <input type="checkbox" name="makita" checked>Makita
+                </label>
               </li>
               <li>
-                <input type="checkbox" id="dewalt">
-                <label for="dewalt">Dewalt</label>
+                <label>
+                  <input type="checkbox" name="dewalt">Dewalt
+                </label>
               </li>
               <li>
-                <input type="checkbox" id="hitachi">
-                <label for="hitachi">Hitachi</label>
+                <label>
+                  <input type="checkbox" name="hitachi">Hitachi
+                </label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
-            <h2>Питание:</h2>
+            <legend>Питание:</legend>
             <ul>
               <li>
-                <input type="radio" id="acum" checked>
-                <label for="acum">Аккумуляторные</label>
+                <label>
+                  <input type="radio" name="power" checked>Аккумуляторные
+                </label>
               </li>
               <li>
-                <input type="radio" id="net">
-                <label for="net">Сетевые</label>
+                <label>
+                  <input type="radio" name="power">Сетевые
+                </label>
               </li>
             </ul>
           </fieldset>
+          <button type="submit">Показать</button>
         </form>
-        <button type="submit">Показать</button>
       </section>
       <section>
-        <!-- <h2>Список перфораторов</h2> -->
+        <h2 class="visually-hidden">Список перфораторов</h2>
         <div>
           <span>Сортировка:</span>
           <ul>
@@ -134,8 +138,8 @@
             <li><a href="#">По типу</a></li>
             <li><a href="№">По функционалу</a></li>
           </ul>
-          <button type="button"><!--стрелка вверх--></button>
-          <button type="button"><!--стрелка вниз--></button>
+          <button type="button" aria-label="Вверх"><!--стрелка вверх--></button>
+          <button type="button" aria-label="Вниз"><!--стрелка вниз--></button>
         </div>
         <ul>
           <li>
@@ -234,7 +238,7 @@
     <div>
       <div>
         <div>
-          <a><img src="img/image/logo-technomart.svg" alt="Техномарт"></a>
+          <a><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
           <p>г.Санкт-Петербург, ул.Б.Конюшенная, д.19&#47;8</p>
           <a href="tel:+78125550555">&#43;7 (812) 555-05-55</a>
         </div>
@@ -257,7 +261,7 @@
       <div>
         <p>&#64;2010–2019 Компания &#171;Техномарт&#187;<br> Все права защищены</p>
         <ul>
-          <li><a href="#">В контакте</a></li>
+          <li><a href="#">Вконтакте</a></li>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Instagram</a></li>
         </ul>
@@ -272,6 +276,15 @@
       </div>
     </div>
   </footer>
+
+  <div>
+    <p>Товар добавлен в корзину</p>
+    <div>
+      <a href="#">Оформить заказ</a>
+      <button type="button">Продолжить покупки</button>
+    </div>
+    <button type="button" aria-label="Закрыть"><!--Закрыть--></button>
+  </div>
 </body>
 
 </html>
