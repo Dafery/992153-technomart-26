@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Интернет-магазин "Техномарт"</title>
+  <title>Каталог интернет-магазина "Техномарт"</title>
 </head>
 
 <body>
@@ -12,6 +12,7 @@
       <div>
         <a><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
         <span>Поиск:</span>
+        <!-- <input type="text" placeholder="Поиск:"> -->
         <div>
           <a href="#">Закладки: <span>0</span></a>
           <a href="#">Корзина: <span>10</span></a>
@@ -36,8 +37,8 @@
             <a href="#" aria-label="Выход из профиля"></a>
           </div>
           <div>
-            <a href="">Мои заказы</a>
-            <a href="">Личный кабинет</a>
+            <a href="#">Мои заказы</a>
+            <a href="#">Личный кабинет</a>
           </div>
         </div>
       </div>
@@ -70,12 +71,12 @@
         <h1>Перфораторы</h1>
       </div>
       <section>
-        <h2 class="visually-hidden">Фильтр</h2>
+        <!-- <h2 class="visually-hidden">Фильтр</h2> -->
         <span>Фильтр:</span>
         <form action="#" method="GET">
           <fieldset>
             <legend>Цена:</legend>
-            <input type="range" min="0" max="30000" step="1" value="25000" aria-label="Ползунок цены">
+            <input type="range" min="0" max="30000" step="1" value="25000" aria-label="Цена">
             <div>
               <input type="number" value="0" aria-label="Минимальная цена"> &#8211;
               <input type="number" value="30000" aria-label="Максимальная цена">
@@ -246,7 +247,7 @@
           <ul>
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
+            <li><a class="active">Каталог</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#">Материалы</a></li>

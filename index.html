@@ -12,6 +12,7 @@
       <div>
         <a><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
         <span>Поиск:</span>
+        <!-- <input type="text" placeholder="Поиск:"> -->
         <div>
           <a href="#">Закладки: <span>0</span></a>
           <a href="#">Корзина: <span>0</span></a>
@@ -237,23 +238,24 @@
 
   <div>
     <img src="img/image/map-popup.png" width="1736" height="779" alt="г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8">
-    <button type="button" aria-label="Закрыть"></button>
+    <button type="button" aria-label="Закрыть карту"></button>
   </div>
 
   <div>
     <form method="POST" action="#">
-      <p>
+      <div>
         <label for="user-name">Ваше имя:</label>
         <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
-      </p>
-      <p>
+      </div>
+      <div>
         <label for="email">Ваш e-mail:</label>
-        <input type="text" id="email" name="email" placeholder="email@example.com">
-      </p>
-      <p>
+        <input type="email" id="email" name="email" placeholder="email@example.com">
+      </div>
+      <div>
         <label for="user-text">Текст письма:</label>
-        <input type="text" id="user-text" name="user-text" placeholder="В свободной форме">
-      </p>
+        <input type="text" id="user-text" name="user-text" placeholder="В  свободной форме">
+        <!-- <textarea id="user-text" name="user-text" placeholder="В свободной форме"></textarea> -->
+      </div>
       <button type="submit">Отправить</button>
     </form>
     <div>
