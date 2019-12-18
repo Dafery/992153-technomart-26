@@ -4,37 +4,40 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин "Техномарт"</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <div>
+  <header class="main-header" role="banner">
+    <div class="top-header">
       <div>
-        <a><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
-        <span>Поиск:</span>
-        <!-- <input type="text" placeholder="Поиск:"> -->
-        <div>
+        <a class="logo header-logo"><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
+        <input type="search" placeholder="Поиск:">
+        <div class="top-menu">
           <a href="#">Закладки: <span>0</span></a>
           <a href="#">Корзина: <span>0</span></a>
-          <a href="#">Оформить заказ</a>
+          <a href="#" class="checkout">Оформить заказ</a>
         </div>
       </div>
     </div>
     <div>
-      <div>
+      <div class="header-middle">
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        <div>
+        <div class="header-contacts">
           <a href="tel:+78125550555">&#43;7 (812) 555-05-55</a>
           <span>г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</span>
         </div>
-        <div>
-          <a href="#">Войти</a>
+        <div class="user-nav">
+          <a href="#" class="login-link">Войти</a>
           <a href="#">Регистрация</a>
         </div>
       </div>
       <div>
-        <nav>
-          <ul>
+        <nav class="nav" role="navigation">
+          <ul class="nav-list">
             <li><a class="active">Главная</a></li>
             <li><a href="#">Компания</a></li>
             <li><a href="catalog.html">Каталог</a></li>
@@ -47,8 +50,8 @@
       </div>
     </div>
   </header>
-  <main>
-    <div>
+  <main role="main">
+    <div class="features-list">
       <div>
         <span>New</span>
         <b>Материалы</b>
@@ -74,15 +77,22 @@
         <!-- Слайдер -->
         <b>Дрели</b>
         <p>Соседям на радость!</p>
-        <a href="catalog.html">Открыть каталог</a>
-        <button type="button" aria-label="Слайдер назад"></button>
-        <button type="button" aria-label="Слайдер вперёд"></button>
+        <!-- <ul>
+          <li></li>
+          <li>
+            <b>Перфораторы</b>
+            <p>Настоящие мужские игрушки</p>
+          </li>
+        </ul> -->
+        <a href="catalog.html" class="btn">Открыть каталог</a>
+        <button type="button" class="control" aria-label="Слайдер назад"></button>
+        <button type="button" class="control" aria-label="Слайдер вперёд"></button>
       </div>
     </div>
     <section>
       <div>
         <h2>Популярные товары:</h2>
-        <a href="#">Все популярные товары</a>
+        <a href="#" class="btn">Все популярные товары</a>
       </div>
       <ul>
         <li>
@@ -90,7 +100,7 @@
           <a href="#">
             <h3>Перфоратор BOSCH BFG 3000</h3>
           </a>
-          <span>32500 Р.</span>
+          <b>32500 Р.</b>
           <a href="#">25500 Р.</a>
         </li>
         <li>
@@ -98,7 +108,7 @@
           <a href="#">
             <h3>Перфоратор BOSCH BFG 6000</h3>
           </a>
-          <span>22500 Р.</span>
+          <b>22500 Р.</b>
           <a href="#">15500 Р.</a>
         </li>
         <li>
@@ -106,7 +116,7 @@
           <a href="#">
             <h3>Перфоратор BOSCH BFG 2000</h3>
           </a>
-          <span>30500 Р.</span>
+          <b>30500 Р.</b>
           <a href="#">25500 Р.</a>
         </li>
         <li>
@@ -122,7 +132,7 @@
     <section>
       <div>
         <h2>Популярные производителя</h2>
-        <a href="#">Все производители</a>
+        <a href="#" class="btn">Все производители</a>
       </div>
       <ul>
         <li>
@@ -165,22 +175,22 @@
             <b>Доставка</b>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж!</p>
           </div>
-          <div>
+          <div class="modal">
             <b>Гарантия</b>
             <p>Если купленный у нас товар поломается или заискрит, <br> а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br> Дом уж восстановите как-нибудь
               сами.
             </p>
           </div>
-          <div>
+          <div class="modal">
             <b>Кредит</b>
             <p>Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.</p>
-            <a href="#">Отправить заявку</a>
+            <a href="#" class="btn">Отправить заявку</a>
           </div>
         </div>
       </div>
     </section>
-    <div>
-      <section>
+    <div class="information">
+      <section class="technomart-company">
         <h2>Компания &#171;Техномарт&#187;</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! <br> Техномарт работает со многими транспортными компаниями:
@@ -190,30 +200,30 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a href="#">Подробнее о компании</a>
+        <a href="#" class="btn">Подробнее о компании</a>
       </section>
-      <section>
+      <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, <br> заехав в наш офис:</p>
         <div>
-          <button type="button">
+          <button type="button" class="btn-cart">
             <img src="img/image/map.png" width="300" height="158" alt="г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8">
           </button>
         </div>
-        <a href="#">Заблудились? Напишите нам!</a>
+        <a href="#" class="btn">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
-  <footer>
+  <footer class="footer" role="contentinfo">
     <div>
       <div>
         <div>
-          <a><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
+          <a class="logo footer-logo"><img src="img/image/logo-technomart.svg" alt="Логотип Техномарт"></a>
           <p>г.Санкт-Петербург, ул.Б.Конюшенная, д.19&#47;8</p>
           <a href="tel:+78125550555">&#43;7 (812) 555-05-55</a>
         </div>
         <div>
-          <ul>
+          <ul class="footer-nav">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="catalog.html">Каталог</a></li>
@@ -227,13 +237,13 @@
         </div>
       </div>
     </div>
-    <div>
+    <div class="footer-bottom">
       <div>
         <p>&#64;2010–2019 Компания &#171;Техномарт&#187;<br> Все права защищены</p>
-        <ul>
-          <li><a href="#">Вконтакте</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
+        <ul class="social-list">
+          <li class="social-item vk"><a href="#">Вконтакте</a></li>
+          <li class="social-item fb"><a href="#">Facebook</a></li>
+          <li class="social-item vk"><a href="#">Instagram</a></li>
         </ul>
         <div>
           <span>Обратная связь:</span>
@@ -247,12 +257,12 @@
     </div>
   </footer>
 
-  <div>
+  <div class="modal map-popup">
     <img src="img/image/map-popup.png" width="1736" height="779" alt="г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8">
     <button type="button" aria-label="Закрыть карту"></button>
   </div>
 
-  <div>
+  <div class="modal modal-question">
     <form method="POST" action="#">
       <div>
         <label for="user-name">Ваше имя:</label>
@@ -263,9 +273,8 @@
         <input type="email" id="email" name="email" placeholder="email@example.com">
       </div>
       <div>
-        <label for="user-text">Текст письма:</label>
-        <input type="text" id="user-text" name="user-text" placeholder="В  свободной форме">
-        <!-- <textarea id="user-text" name="user-text" placeholder="В свободной форме"></textarea> -->
+        <label for="user-text" aria-label="Текст письма, в свободной форме:">Текст письма:</label>
+        <textarea id="user-text" name="user-text" placeholder="В свободной форме"></textarea>
       </div>
       <button type="submit">Отправить</button>
     </form>

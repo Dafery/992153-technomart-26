@@ -1,0 +1,451 @@
+body {
+  margin: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.container {
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+.modal {
+  display: none;
+}
+
+.main-header {
+  background-color: #f4f7f9;
+}
+
+.top-header {
+  background-color: #293449;
+}
+
+.nav-list,
+.technomart-company ul,
+.breadcrumbs,
+.filter ul,
+.catalog-list {
+  list-style: none;
+}
+
+.top-menu a,
+.nav-list a,
+.footer a {
+  color: #fff;
+}
+
+.logo {
+  display: inline-block;
+  width: 220px;
+  background-color: #ee3643;
+}
+
+.logo:hover,
+.logo:focus,
+.btn:hover,
+.btn:focus {
+  background-color: #ca2c37;
+}
+
+.logo:active,
+.btn:active {
+  background-color: #ba2732;
+}
+
+.header-logo {
+  height: 42px;
+}
+
+input[type="search"] {
+  border: 0;
+  background-color: #293449;
+  color: #fff;
+}
+
+input[type="search"]::-webkit-input-placeholder {
+  color: #fff;
+}
+
+input[type="search"]::-moz-placeholder {
+  color: #fff;
+}
+
+.top-header input:hover,
+.top-header input:focus,
+.top-menu a:hover,
+.top-menu a:focus {
+  background-color: #212a3a;
+}
+
+.top-menu a:active {
+  background-color: #161d29;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input[type="search"]:focus {
+  color: #000;
+  background-color: #fff;
+}
+
+.checkout {
+  background-color: #63a63e;
+}
+
+.top-menu .checkout:hover,
+.top-menu .checkout:focus {
+  background-color: #5fbb2d;
+}
+
+.top-menu .checkout:active {
+  background-color: #518534;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header-middle p {
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: #ee3643;
+}
+
+.header-contacts a {
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+  border: 3px solid #fff;
+}
+
+.header-contacts span {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.user-nav a {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000;
+  background-color: #fff;
+}
+
+.user-nav a:hover,
+.user-nav a:focus {
+  color: #ee3643;
+}
+
+.user-nav a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.account-login {
+  font-size: 21px;
+  line-height: 21px;
+  background-color: #fff;
+}
+
+.account-login a {
+  color: #000;
+}
+
+
+/* .account-login:last-child:hover {
+  color: #32425c;
+} */
+
+.my-date a {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.my-date span {
+  font-size: 17px;
+  line-height: 17px;
+  color: #32425c;
+  vertical-align: middle;
+}
+
+.account-login a:active {
+  opacity: 0.3;
+}
+
+.my-date a:hover,
+.my-date a:focus {
+  color: #ee3643;
+}
+
+.my-date a:active {
+  color: #32425c;
+  opacity: 0.3;
+}
+
+.nav a {
+  font-size: 17px;
+  line-height: 17px;
+  color: #fff;
+  background-color: #32425c;
+}
+
+.nav a:hover,
+.nav a:focus {
+  background-color: #293449;
+}
+
+.nav a:active {
+  background-color: #1d2739;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn {
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ee3643;
+}
+
+.information h2,
+.page-title h1 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.information p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.technomart-company li {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.btn-cart {
+  border: 0;
+}
+
+.footer {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #32425c;
+  color: #fff;
+}
+
+.footer-logo {
+  height: 63px;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer-nav li:nth-child(n+6):nth-child(-n+9) a,
+.footer-bottom a {
+  color: #ffda96;
+}
+
+.footer-bottom {
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #293449;
+}
+
+.footer-bottom .social-item {
+  background-color: #212a3a;
+}
+
+.social-item a {
+  opacity: 0;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus,
+.footer-bottom a:hover,
+.footer-bottom a:focus {
+  text-decoration: underline;
+}
+
+.footer-nav a:active {
+  opacity: 0.5;
+}
+
+.footer-bottom .social-item:hover,
+.footer-bottom .social-item:focus,
+.footer-bottom .social-item:active {
+  background-color: #ee3643;
+}
+
+.footer-bottom a:active {
+  color: #ee3643;
+}
+
+a,
+.social-list {
+  text-align: center;
+}
+
+.full-basket {
+  background-color: #ee3643;
+}
+
+.top-menu .full-basket:hover,
+.top-menu .full-basket:focus {
+  background-color: #ca2c37;
+}
+
+.top-menu .full-basket:active {
+  color: rgba(255, 255, 255, 1);
+  background-color: #ba2732;
+}
+
+.breadcrumbs a {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.page-title h1 {
+  font-family: "Cuprum", Arial, sans-serif;
+  color: #32425c;
+  background-color: #f2f6f8;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter ul {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.btn-show {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  text-transform: uppercase;
+}
+
+.filter-input:hover,
+.filter-input:focus {
+  color: #b5b5b5;
+}
+
+.filter-input:disabled+label {
+  color: #e9e9e9;
+}
+
+.catalog-list a {
+  color: #000;
+}
+
+.catalog-list h3 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.catalog-item b {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.catalog-item .btn-price {
+  display: block;
+  height: 38px;
+  width: 141px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #fff;
+  background: url("../img/image/red-button.svg") center no-repeat;
+}
+
+.catalog-item button {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+}
+
+.catalog-item .btn-buy {
+  color: #fff;
+  background-color: #63a63e;
+}
+
+.catalog-item .btn-to-bookmarks {
+  color: #32425c;
+  background-color: #fff;
+  border: 4px solid #63a63e;
+}
+
+.btn-buy:hover,
+.btn-buy:focus {
+  background-color: #5fbb2d;
+}
+
+.btn-buy:active {
+  background-color: #518534;
+}
+
+.btn-to-bookmarks:hover,
+.btn-to-bookmarks:focus {
+  border-color: #32425c;
+}
+
+.btn-to-bookmarks:active {
+  border-color: #c1c6ce;
+  color: rgba(50, 66, 92, 0.3);
+}
