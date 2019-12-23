@@ -286,6 +286,10 @@ input[type="search"]::-moz-placeholder {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.slider {
+  background: url("../img/image/layer 99.jpg") no-repeat;
+}
+
 .slider-title {
   font-size: 36px;
   line-height: 36px;
