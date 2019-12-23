@@ -287,7 +287,7 @@ input[type="search"]::-moz-placeholder {
 }
 
 .slider {
-  background: url("../img/image/layer 99.jpg") no-repeat;
+  background: url("../img/image/layer 99.jpg") no-repeat #301d19;
 }
 
 .slider-title {
