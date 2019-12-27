@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   background-color: #fff;
@@ -45,11 +46,11 @@ html {
   font-family: "PT Sans", Arial, sans-serif;
 }
 
-.modal {
-  display: none;
-}
-
 .header-page {
+  min-height: 320px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
   background-color: #f4f7f9;
 }
 
@@ -80,9 +81,10 @@ html {
 }
 
 .logo {
-  display: inline-block;
+  display: block;
   width: 220px;
   background-color: #ee3643;
+  border-bottom: 5px solid #b52933;
 }
 
 .logo:hover,
@@ -98,10 +100,14 @@ html {
 }
 
 .header-logo {
-  height: 42px;
+  height: 48px;
 }
 
 .search {
+  width: 263px;
+  height: 43px;
+  font-size: 17px;
+  line-height: 18px;
   border: 0;
   background-color: #293449;
   color: #fff;
@@ -147,13 +153,19 @@ input[type="search"]::-moz-placeholder {
 }
 
 .header-text {
+  width: 200px;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
   color: #ee3643;
+  margin: 0;
+  margin-left: 52px;
 }
 
 .tel {
+  display: block;
+  width: 270px;
+  height: 45px;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
@@ -166,7 +178,13 @@ input[type="search"]::-moz-placeholder {
   color: #32425c;
 }
 
+.user-nav {
+  display: flex;
+  flex-direction: row;
+}
+
 .user-btn {
+  height: 45px;
   font-size: 21px;
   line-height: 21px;
   color: #000;
@@ -186,6 +204,10 @@ input[type="search"]::-moz-placeholder {
   font-size: 21px;
   line-height: 21px;
   background-color: #fff;
+  width: 300px;
+  min-height: 45px;
+  margin: 0;
+  margin-bottom: 7px;
 }
 
 .user-name {
@@ -226,6 +248,8 @@ input[type="search"]::-moz-placeholder {
 }
 
 .nav-link {
+  display: inline-block;
+  min-height: 60px;
   font-size: 17px;
   line-height: 17px;
   color: #fff;
@@ -304,11 +328,17 @@ input[type="search"]::-moz-placeholder {
   color: #fff;
 }
 
+.goods-inner,
+.brands-inner {
+  background-color: #f9f5f0;
+}
+
 .popular {
   font-size: 30px;
   line-height: 30px;
   color: #32425c;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .brands-item {
@@ -332,6 +362,11 @@ input[type="search"]::-moz-placeholder {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.page-title {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
 }
 
 .services p,
@@ -393,7 +428,7 @@ input[type="search"]::-moz-placeholder {
 }
 
 .footer-logo {
-  height: 63px;
+  height: 68px;
 }
 
 .footer-item:nth-child(n+6):nth-child(-n+9) a,
@@ -538,6 +573,7 @@ input[type="search"]::-moz-placeholder {
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
+  padding: 0;
 }
 
 .btn-show {
@@ -566,6 +602,11 @@ input[type="search"]::-moz-placeholder {
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
+  width: 158px;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .old-price {
@@ -574,17 +615,26 @@ input[type="search"]::-moz-placeholder {
   font-weight: 700;
   color: #999999;
   text-decoration: line-through;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .price {
   display: block;
-  height: 38px;
+  min-height: 38px;
   width: 141px;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
   color: #fff;
   background: url("../img/image/red-button.svg") center no-repeat;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
 
 .button {
@@ -593,17 +643,20 @@ input[type="search"]::-moz-placeholder {
   text-align: center;
   border: none;
   text-transform: uppercase;
+  min-height: 38px;
+  margin-bottom: 8px;
 }
 
 .btn-buy {
   color: #fff;
   background-color: #63a63e;
+  border-bottom: 3px solid #367315;
 }
 
 .btn-to-bookmarks {
   color: #32425c;
   background-color: #fff;
-  border: 4px solid #63a63e;
+  border: 3px solid #63a63e;
 }
 
 .btn-buy:hover,
@@ -660,4 +713,263 @@ input[type="search"]::-moz-placeholder {
 .info-text {
   font-size: 13px;
   line-height: 24px;
+}
+
+.footer-address {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.copy,
+.feedback-text,
+.developer-text {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.container {
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.header-top {
+  width: 100%;
+  height: 43px;
+}
+
+.inner-header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+/* Почему я 3 блока по 150 не могу обернуть в один 450? не помещаются */
+
+.top-menu {
+  display: flex;
+  flex-direction: row;
+  width: 450px;
+}
+
+.top-menu-link {
+  font-size: 17px;
+  line-height: 18px;
+  width: 150px;
+  height: 43px;
+  /* Если ставлю мин-высоту, блок выпадает и становится не 43 */
+}
+
+.header-middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.header-contacts {
+  width: 270px;
+  text-align: center;
+}
+
+.entry {
+  width: 120px;
+}
+
+.registration {
+  width: 150px;
+  margin-left: 10px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  min-height: 60px;
+  margin-top: 44px;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 537px;
+}
+
+.technomart-company {
+  width: 520px;
+  margin: 0;
+  margin-top: 60px;
+}
+
+.contacts {
+  width: 300px;
+  margin: 0;
+  margin-top: 60px;
+}
+
+.footer-top {
+  min-height: 195px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  width: 613px;
+}
+
+.footer-item {
+  padding: 0;
+  padding-top: 33px;
+  padding-left: 59px;
+}
+
+.footer-bottom {
+  min-height: 107px;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+
+/* В макете line-height:18px, но тогда по виду не подходит */
+
+.feedback,
+.developer {
+  line-height: 16px;
+}
+
+.feedback {
+  margin-left: 110px;
+}
+
+.developer {
+  margin-right: 13px;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs-item {
+  margin-right: 10px;
+}
+
+.filters-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 220px;
+}
+
+.sorting {
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.catalog {
+  width: 700px;
+  min-height: 1150px;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.catalog-img {
+  height: 170px;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.catalog-item {
+  width: 220px;
+  min-height: 318px;
+  margin-right: 20px;
+  margin-bottom: 22px;
+  border: 1px solid #e5e5e5;
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.block-button {
+  font-family: "Cuprum", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 135px;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 172px;
+}
+
+.pagination-list {
+  margin: 0;
+  padding: 0;
+  min-height: 40px;
+}
+
+
+/* .goods-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.goods-list .catalog-item {
+  margin: 0;
+} */
+
+.modal {
+  display: none;
+}
+
+.catalog-item-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 136px;
+  margin: 0;
+  margin-top: 6px;
 }
