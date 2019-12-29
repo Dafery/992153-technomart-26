@@ -50,7 +50,7 @@ html {
   min-height: 320px;
   margin: 0;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   background-color: #f4f7f9;
 }
 
@@ -254,11 +254,46 @@ input[type="search"]::-moz-placeholder {
   line-height: 17px;
   color: #fff;
   background-color: #32425c;
+  /* padding: 21px 31px; */
 }
+
+
+/* 
+.nav-item:first-child .nav-link:first-child {
+  padding-left: 51px;
+}
+
+.nav-item:last-child .nav-link:first-child {
+  padding-right: 53px;
+} */
 
 .nav-link:hover,
 .nav-link:focus {
   background-color: #293449;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 33px;
+  min-height: 409px;
+}
+
+.features-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: 23px;
+  margin-bottom: 20px;
+  width: 300px;
+  min-height: 123px;
 }
 
 .nav-link:active {
@@ -266,23 +301,23 @@ input[type="search"]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.features-item:nth-child(2) {
+.materials {
   background-color: #ffbf47;
 }
 
-.features-item:nth-child(3) {
+.instrument {
   background-color: #3bbce3;
 }
 
-.features-item:nth-child(4) {
+.equipment {
   background-color: #dc91d8;
 }
 
-.features-item:nth-child(5) {
+.discounts {
   background-color: #8ed78f;
 }
 
-.features-item:nth-child(6) {
+.delivery {
   background-color: #ffc047;
 }
 
@@ -299,6 +334,8 @@ input[type="search"]::-moz-placeholder {
   text-transform: uppercase;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.1);
+  width: 135px;
+  min-height: 38px;
 }
 
 .features-link:hover,
@@ -311,21 +348,36 @@ input[type="search"]::-moz-placeholder {
 }
 
 .slider {
+  width: 620px;
   background: url("../img/image/layer 99.jpg") no-repeat #301d19;
+  min-height: 266px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  padding-top: 23px;
+  padding-right: 20px;
+  padding-bottom: 22px;
+  padding-left: 25px;
 }
 
 .slider-title {
+  display: block;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2px;
 }
 
 .slider-text {
   font-size: 18px;
   line-height: 24px;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .goods-inner,
@@ -362,6 +414,7 @@ input[type="search"]::-moz-placeholder {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .page-title {
@@ -374,10 +427,15 @@ input[type="search"]::-moz-placeholder {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
+  font-weight: 400;
 }
 
 .services {
   background-color: #f4f8f9;
+  min-height: 522px;
+  padding: 0;
+  padding-top: 40px;
+  padding-bottom: 98px;
 }
 
 .services-item {
@@ -386,6 +444,12 @@ input[type="search"]::-moz-placeholder {
   font-weight: 700;
   color: #fff;
   background-color: #32425c;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+  margin: 0;
+  padding: 0;
+  padding-left: 23px;
+  min-height: 62px;
 }
 
 .services-item:hover,
@@ -397,6 +461,7 @@ input[type="search"]::-moz-placeholder {
 .services-active {
   color: #32425c;
   background-color: #fff;
+  border: none;
 }
 
 .services-item:active {
@@ -407,6 +472,7 @@ input[type="search"]::-moz-placeholder {
 .block-title {
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
   color: #32425c;
   text-transform: uppercase;
 }
@@ -425,6 +491,7 @@ input[type="search"]::-moz-placeholder {
   line-height: 24px;
   background-color: #32425c;
   color: #fff;
+  min-height: 300px;
 }
 
 .footer-logo {
@@ -502,10 +569,6 @@ input[type="search"]::-moz-placeholder {
   background-color: #f2f6f8;
 }
 
-.filter-inner {
-  border: none;
-}
-
 .name-filter,
 .sorting {
   font-size: 13px;
@@ -513,6 +576,14 @@ input[type="search"]::-moz-placeholder {
   color: #000;
   background-color: #f7f3ec;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  padding-left: 19px;
+  min-height: 38px;
+}
+
+.name-filter {
+  margin-bottom: 10px;
 }
 
 .range-block,
@@ -521,23 +592,97 @@ input[type="search"]::-moz-placeholder {
   background-color: #f7f3ec;
 }
 
+.price-selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 38px;
+}
+
+
+/* Как сделать текст по центру? сменить тип на текст? */
+
 .min-price,
 .max-price {
   font-size: 17px;
   line-height: 18px;
   color: #000;
-  text-align: center;
   text-transform: uppercase;
   border: none;
+  width: 95px;
+  padding: 0;
+  text-align: center;
+}
+
+.range-block {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 9px;
+  height: 80px;
+}
+
+
+/* Только с установлением высоты самому элем. текст становится верт. по-центру
+.range {
+  height: 80px;
+} */
+
+.sorting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-right: 17px;
+}
+
+.name-sorting {
+  margin-right: 95px;
+}
+
+.sorting-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 355px;
+  margin: 0;
+  padding: 0;
 }
 
 .sorting-link {
   color: rgba(0, 0, 0, 0.30);
   border-bottom: 1px dotted #ee3643;
+  margin: 0;
+  padding: 0;
 }
 
 .sorting-control {
-  color: rgba(0, 0, 0, 0.30);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 43px;
+  margin: 0;
+  padding: 0;
+}
+
+.control-up,
+.control-down {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.control-up {
+  width: 11px;
+  height: 10px;
+  background: url("../img/image/icon-up-dir.svg") center no-repeat;
+}
+
+.control-down {
+  width: 11px;
+  height: 10px;
+  background: url("../img/image/icon-down-dir.svg") center no-repeat;
 }
 
 .sorting-link:hover,
@@ -546,13 +691,19 @@ input[type="search"]::-moz-placeholder {
   border-bottom: 1px solid #ee3643;
 }
 
-.sorting-control:hover,
-.sorting-control:focus {
+
+/* Как сделать svg-файл нужного мне цвета? */
+
+.control-up:hover,
+.control-down:hover,
+.control-up:focus,
+.control-down:focus {
   color: #000;
 }
 
 .sorting-link:active,
-.sorting-control:active {
+.control-up:active,
+.control-down:active {
   color: #ee3643;
   border: none;
 }
@@ -567,6 +718,9 @@ input[type="search"]::-moz-placeholder {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 13px;
 }
 
 .filter-list {
@@ -574,6 +728,15 @@ input[type="search"]::-moz-placeholder {
   line-height: 20px;
   text-transform: uppercase;
   padding: 0;
+  margin: 0;
+}
+
+.filter-item {
+  margin-bottom: 20px;
+}
+
+.filter-item:last-child {
+  margin-bottom: 0;
 }
 
 .btn-show {
@@ -583,6 +746,11 @@ input[type="search"]::-moz-placeholder {
   background-color: #fff;
   border: 1px solid #e5e5e5;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-top: 35px;
+  width: 140px;
+  min-height: 38px;
 }
 
 .filter-input:hover,
@@ -678,13 +846,31 @@ input[type="search"]::-moz-placeholder {
   color: rgba(50, 66, 92, 0.3);
 }
 
+.pagination-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  min-height: 38px;
+}
+
 .pagination-link {
+  display: inline-block;
   font-size: 13px;
   line-height: 18px;
   color: #000;
   background-color: #fff;
   text-transform: uppercase;
   border: 1px solid #e5e5e5;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  min-width: 38px;
+  min-height: 38px;
 }
 
 .pagination-link:hover,
@@ -704,15 +890,24 @@ input[type="search"]::-moz-placeholder {
 
 .perforator-info {
   background-color: #f2f6f8;
+  margin: 0;
+  padding: 0;
+  padding-top: 65px;
+  min-height: 260px;
 }
 
 .info-title {
   font-family: "Cuprum", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .info-text {
   font-size: 13px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
 }
 
 .footer-address {
@@ -769,7 +964,10 @@ input[type="search"]::-moz-placeholder {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 48px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 41px;
+  padding-top: 48px;
 }
 
 .header-contacts {
@@ -793,42 +991,42 @@ input[type="search"]::-moz-placeholder {
   margin: 0;
   padding: 0;
   min-height: 60px;
-  margin-top: 44px;
 }
 
 .company-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 55px;
+  padding-bottom: 86px;
   min-height: 537px;
 }
 
 .technomart-company {
   width: 520px;
   margin: 0;
-  margin-top: 60px;
 }
 
 .contacts {
   width: 300px;
   margin: 0;
-  margin-top: 60px;
 }
 
 .footer-top {
-  min-height: 195px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-height: 193px;
 }
 
 .footer-list {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap;
+  margin-top: 6px;
   width: 613px;
 }
 
@@ -893,9 +1091,21 @@ input[type="search"]::-moz-placeholder {
   width: 220px;
 }
 
-.sorting {
+.filter {
   margin: 0;
-  margin-bottom: 22px;
+  padding: 0;
+}
+
+.filter-inner {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 25px;
+  margin-bottom: 17px;
+  border: none;
+}
+
+.filter-inner:not(:last-of-type) {
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .catalog {
@@ -923,12 +1133,25 @@ input[type="search"]::-moz-placeholder {
   width: 220px;
   min-height: 318px;
   margin-right: 20px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   border: 1px solid #e5e5e5;
 }
 
 .catalog-item:nth-child(3n) {
   margin-right: 0;
+}
+
+.catalog-item-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 155px;
+  min-height: 136px;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 6px;
 }
 
 .block-button {
@@ -943,14 +1166,23 @@ input[type="search"]::-moz-placeholder {
   min-height: 172px;
 }
 
-.pagination-list {
-  margin: 0;
-  padding: 0;
-  min-height: 40px;
+.goods {
+  min-height: 428px;
+  margin-bottom: 21px;
 }
 
+.goods-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 89px;
+  margin-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 28px;
+}
 
-/* .goods-list {
+.goods-list {
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -959,17 +1191,81 @@ input[type="search"]::-moz-placeholder {
 
 .goods-list .catalog-item {
   margin: 0;
-} */
+}
+
+.brands {
+  min-height: 421px;
+  margin-bottom: 65px;
+}
+
+
+/* Как сделать картинки брэндов по ценру по вертикали? */
+
+.brands-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 89px;
+  margin-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 28px;
+}
+
+.brands-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.brands-item {
+  width: 220px;
+  min-height: 145px;
+  border: 1px solid #ebebeb;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.brands-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.services-text {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 70px;
+}
+
+.services-inner {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.services-list {
+  width: 240px;
+  margin: 0;
+  padding: 0;
+  margin-right: 80px;
+}
+
+.services-block {
+  width: 278px;
+  margin: 0;
+  padding: 0;
+}
+
+.block-text {
+  margin: 0;
+  padding: 0;
+  margin-top: 24px;
+}
 
 .modal {
   display: none;
-}
-
-.catalog-item-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 136px;
-  margin: 0;
-  margin-top: 6px;
 }
