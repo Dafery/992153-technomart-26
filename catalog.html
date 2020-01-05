@@ -14,12 +14,16 @@
     <div class="header-top">
       <div class="inner-header-top container">
         <a class="logo header-logo">
-          <img class="logo-img" src="img/image/logo-technomart.svg" alt="Логотип Техномарт">
+          <img class="logo-img" src="img/image/logo-technomart.svg" width="111" height="19" alt="Логотип Техномарт">
         </a>
-        <input class="search" type="search" placeholder="Поиск:">
+        <div class="search-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+          </svg>
+          <input class="search" type="search" placeholder="Поиск:">
+        </div>
         <div class="top-menu">
           <a class="top-menu-link bookmarks" href="#">Закладки: <span>0</span></a>
-          <a class="top-menu-link full-basket" href="#">Корзина: <span>10</span></a>
+          <a class="top-menu-link basket full-basket" href="#">Корзина: <span>10</span></a>
           <a class="top-menu-link checkout" href="#">Оформить заказ</a>
         </div>
       </div>
@@ -37,13 +41,17 @@
         </div>
         <div class="account">
           <div class="user">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
+            </svg>
             <a class="user-name" href="#">Равшан Джамшутович</a>
-            <a class="user-exit" href="#" aria-label="Выход из профиля"></a>
+            <a class="user-exit" href="#" aria-label="Выход из профиля">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17"><g fill="#c5c5c5"><path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"/><path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/></g>
+              </svg>
+            </a>
           </div>
           <div class="user-date">
             <a class="user-link" href="#">Мои заказы</a>
-            <span>&#8226;</span>
-            <!-- как сделать точку круглой -->
+            <span></span>
             <a class="user-link" href="#">Личный кабинет</a>
           </div>
         </div>
@@ -78,8 +86,10 @@
   <main class="main-catalog" role="main">
     <section class="container">
       <ul class="breadcrumbs-list">
-        <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="#" aria-label="Главная"></a>
+        <li class="breadcrumbs-item breadcrumbs-home">
+          <a class="breadcrumbs-link" href="#" aria-label="Главная">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12"><g fill="#C1C6CE"><path d="M3 8v4h4V8h2v4h4V8L8 3.516z"/><path d="M14.831 6.365L13 4.751V0h-2v2.987L8.332.635c-.02-.017-.043-.023-.064-.037a.465.465 0 0 0-.08-.047.551.551 0 0 0-.095-.024C8.062.521 8.032.515 8 .515c-.031 0-.061.006-.092.012a.46.46 0 0 0-.095.025c-.028.011-.053.029-.08.046-.021.014-.045.02-.064.037l-6.498 5.73a.501.501 0 0 0 .33.875.497.497 0 0 0 .331-.125L8 1.677l6.169 5.438a.501.501 0 0 0 .662-.75z"/></g></svg>
+          </a>
         </li>
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="#">Каталог</a>
@@ -116,23 +126,38 @@
                 <!--aria-labelledby="manufacturers"-->
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="bosch" name="bosch" checked>
-                  <label class="filter-label" for="bosch">Bosch</label>
+                  <label class="filter-label" for="bosch">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path fill="#c5c5c5" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#c5c5c5" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                  </svg>Bosch
+                </label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="interscol" name="interscol">
-                  <label class="filter-label" for="interscol">Интерскол</label>
+                  <label class="filter-label" for="interscol">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path fill="#c5c5c5" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                  </svg>Интерскол
+                </label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="makita" name="makita" checked>
-                  <label class="filter-label" for="makita">Makita</label>
+                  <label class="filter-label" for="makita">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path fill="#c5c5c5" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#c5c5c5" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
+                  </svg>Makita
+                </label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="dewalt" name="dewalt">
-                  <label class="filter-label" for="dewalt">Dewalt</label>
+                  <label class="filter-label" for="dewalt">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path fill="#c5c5c5" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                  </svg>Dewalt
+                </label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="hitachi" name="hitachi">
-                  <label class="filter-label" for="hitachi">Hitachi</label>
+                  <label class="filter-label" for="hitachi">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path fill="#c5c5c5" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
+                  </svg>Hitachi
+                </label>
                 </li>
               </ul>
             </fieldset>
@@ -141,11 +166,17 @@
               <ul class="filter-list">
                 <li class="filter-item">
                   <input class="filter-input" type="radio" id="accum" name="power" checked>
-                  <label class="filter-label" for="accum">Аккумуляторные</label>
+                  <label class="filter-label" for="accum">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><path fill="#c5c5c5" d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/><circle fill="#c5c5c5" cx="12.5" cy="12.5" r="4.5"/>
+                  </svg>Аккумуляторные
+                </label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="radio" id="net" name="power">
-                  <label class="filter-label" for="net">Сетевые</label>
+                  <label class="filter-label" for="net">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><path fill="#c5c5c5" d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/>
+                  </svg>Сетевые
+                </label>
                 </li>
               </ul>
             </fieldset>
@@ -194,7 +225,6 @@
               </div>
             </li>
             <li class="catalog-item">
-              <!-- <span>New</span> -->
               <div class="block-button">
                 <button class="button btn-buy" type="button">Купить</button>
                 <button class="button btn-to-bookmarks" type="button">В закладки</button>
@@ -223,8 +253,8 @@
                 <a class="catalog-link" href="#">
                   <h3 class="catalog-title">Перфоратор BOSCH BFG 6000</h3>
                 </a>
-                <b class="old-price">22500 Р.</b>
-                <a href="#" class="price">15500 Р.</a>
+                <b class="old-price">30500 Р.</b>
+                <a href="#" class="price">25500 Р.</a>
               </div>
             </li>
             <li class="catalog-item">
@@ -278,7 +308,7 @@
               <a class="pagination-link" href="#">3</a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" href="#">Следующая</a>
+              <a class="pagination-link next" href="#">Следующая</a>
             </li>
           </ul>
         </section>
@@ -297,7 +327,7 @@
       <div class="footer-top">
         <div class="footer-left">
           <a class="logo footer-logo">
-            <img class="logo-img" src="img/image/logo-technomart.svg" alt="Логотип Техномарт">
+            <img class="logo-img" src="img/image/logo-technomart.svg" width="138" height="22" alt="Логотип Техномарт">
           </a>
           <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19&#47;8</p>
           <a class="footer-tel" href="tel:+78125550555">&#43;7 (812) 555-05-55</a>
@@ -340,14 +370,20 @@
         <div class="footer-bottom-inner">
           <p class="copy">&#169; 2010–2019 Компания &#171;Техномарт&#187;<br> Все права защищены</p>
           <ul class="social-list">
-            <li class="social-item vk">
-              <a class="social-link" href="#">Вконтакте</a>
+            <li class="social-item" title="Мы Вконтакте">
+              <a class="social-link vk" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
             </li>
-            <li class="social-item fb">
-              <a class="social-link" href="#">Facebook</a>
+            <li class="social-item" title="Мы в Facebook">
+              <a class="social-link fb" href="#">
+                <span class="visually-hidden">Facebook</span>
+              </a>
             </li>
-            <li class="social-item vk">
-              <a class="social-link" href="#">Instagram</a>
+            <li class="social-item" title="Мы в Instagram">
+              <a class="social-link inst" href="#">
+                <span class="visually-hidden">Instagram</span>
+              </a>
             </li>
           </ul>
           <div class="feedback">
@@ -366,13 +402,15 @@
     </div>
   </footer>
 
-  <div class="modal item-added">
-    <p>Товар добавлен в корзину</p>
-    <div>
-      <a href="#">Оформить заказ</a>
-      <button type="button">Продолжить покупки</button>
+  <div class="item-added modal">
+    <p class="item-text">Товар добавлен в корзину!</p>
+    <div class="item-added-btn">
+      <a class="btn checkout-btn" href="#">Оформить заказ</a>
+      <button class="continue-btn" type="button">Продолжить покупки</button>
     </div>
-    <button type="button" aria-label="Закрыть"><!--Закрыть--></button>
+    <button class="item-added-exit" type="button" aria-label="Закрыть">
+      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
+    </button>
   </div>
 </body>
 

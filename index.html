@@ -14,9 +14,12 @@
     <div class="header-top">
       <div class="inner-header-top container">
         <a class="logo header-logo">
-          <img class="logo-img" src="img/image/logo-technomart.svg" alt="Логотип Техномарт">
+          <img class="logo-img" src="img/image/logo-technomart.svg" width="111" height="19" alt="Логотип Техномарт">
         </a>
-        <input class="search" type="search" placeholder="Поиск:">
+        <div class="search-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+          </svg>
+          <input class="search" type="search" placeholder="Поиск:">
+        </div>
         <div class="top-menu">
           <a class="top-menu-link bookmarks" href="#">Закладки: <span>0</span></a>
           <a class="top-menu-link basket" href="#">Корзина: <span>0</span></a>
@@ -32,7 +35,10 @@
           <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
         <div class="user-nav">
-          <a class="user-btn entry" href="#">Войти</a>
+          <a class="user-btn entry" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/><path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
+            </svg> Войти
+          </a>
           <a class="user-btn registration" href="#">Регистрация</a>
         </div>
       </div>
@@ -67,7 +73,6 @@
     <div class="container features">
       <h1 class="visually-hidden">Техномарт</h1>
       <div class="features-item materials">
-        <!-- <span>New</span> -->
         <b class="features-title">Материалы</b>
         <a class="features-link" href="#" aria-label="Материалы">На любой вкус</a>
       </div>
@@ -81,19 +86,18 @@
         <a class="features-link" href="#" aria-label="Техника">Для стройки</a>
       </div>
       <div class="slider">
-        <!-- Слайдер -->
-        <b class="slider-title">Дрели</b>
-        <p class="slider-text">Соседям на радость!</p>
-        <!-- <ul>
-          <li></li>
-          <li>
+        <ul class="slider-list">
+          <li class="slider-item slide-drill">
+            <b class="slider-title">Дрели</b>
+            <p class="slider-text">Соседям на радость!</p>
+          </li>
+          <li class="slider-item slide-perforator
+          visually-hidden">
             <b class="slider-title">Перфораторы</b>
             <p class="slider-text">Настоящие мужские игрушки</p>
           </li>
-        </ul> -->
-        <a class="btn" href="catalog.html">Открыть каталог</a>
-        <button class="slider-control" type="button" aria-label="Слайдер назад"></button>
-        <button class="slider-control" type="button" aria-label="Слайдер вперёд"></button>
+        </ul>
+        <a class="btn open-catalog" href="catalog.html">Открыть каталог</a>
       </div>
       <div>
         <div class="features-item discounts">
@@ -109,7 +113,7 @@
     <section class="container goods">
       <div class="goods-inner">
         <h2 class="popular goods-title">Популярные товары:</h2>
-        <a class="btn" href="#">Все популярные товары</a>
+        <a class="btn popular-goods" href="#">Все популярные товары</a>
       </div>
       <ul class="goods-list">
         <li class="catalog-item">
@@ -157,7 +161,7 @@
     <section class="container brands">
       <div class="brands-inner">
         <h2 class="popular brands-title">Популярные производители:</h2>
-        <a class="btn" href="#">Все производители</a>
+        <a class="btn popular-brands" href="#">Все производители</a>
       </div>
       <ul class="brands-list">
         <li class="brands-item">
@@ -176,7 +180,7 @@
           </a>
         </li>
         <li class="brands-item">
-          <a class="brands-link" href="#">
+          <a class="brands-link brand-interskol" href="#">
             <img class="brands-img" src="img/image/interscol.png" width="200" height="88" alt="Интерскол">
           </a>
         </li>
@@ -237,11 +241,14 @@
         <p class="company-text">Мы можем доставить ваш товар в самые отдаленные точки России! <br> Техномарт работает со многими транспортными компаниями:
         </p>
         <ul class="transport-companies">
-          <li class="transport-companies-item">Деловые линии</li>
-          <li class="transport-companies-item">Автотрейдинг</li>
-          <li class="transport-companies-item">ЖелДорЭкспедиция</li>
+          <li class="transport-companies-item">
+            <p class="line"></p>Деловые линии</li>
+          <li class="transport-companies-item">
+            <p class="line"></p>Автотрейдинг</li>
+          <li class="transport-companies-item">
+            <p class="line"></p>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="btn" href="#">Подробнее о компании</a>
+        <a class="btn btn-companies" href="#">Подробнее о компании</a>
       </section>
       <section class="contacts">
         <h2 class="contacts-title">Контакты</h2>
@@ -249,7 +256,7 @@
         <button class="btn-cart" type="button">
           <img class="cart-img" src="img/image/map.png" width="300" height="158" alt="г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8">
         </button>
-        <a class="btn" href="#">Заблудились? Напишите нам!</a>
+        <a class="btn btn-feedback" href="#">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
@@ -258,7 +265,7 @@
       <div class="footer-top">
         <div class="footer-left">
           <a class="logo footer-logo">
-            <img class="logo-img" src="img/image/logo-technomart.svg" alt="Логотип Техномарт">
+            <img class="logo-img" src="img/image/logo-technomart.svg" width="138" height="22" alt="Логотип Техномарт">
           </a>
           <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19&#47;8</p>
           <a class="footer-tel" href="tel:+78125550555">&#43;7 (812) 555-05-55</a>
@@ -301,14 +308,20 @@
         <div class="footer-bottom-inner">
           <p class="copy">&#169; 2010–2019 Компания &#171;Техномарт&#187;<br> Все права защищены</p>
           <ul class="social-list">
-            <li class="social-item vk">
-              <a class="social-link" href="#">Вконтакте</a>
+            <li class="social-item" title="Мы Вконтакте">
+              <a class="social-link vk" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
             </li>
-            <li class="social-item fb">
-              <a class="social-link" href="#">Facebook</a>
+            <li class="social-item" title="Мы в Facebook">
+              <a class="social-link fb" href="#">
+                <span class="visually-hidden">Facebook</span>
+              </a>
             </li>
-            <li class="social-item vk">
-              <a class="social-link" href="#">Instagram</a>
+            <li class="social-item" title="Мы в Instagram">
+              <a class="social-link inst" href="#">
+                <span class="visually-hidden">Instagram</span>
+              </a>
             </li>
           </ul>
           <div class="feedback">
@@ -332,25 +345,26 @@
     <button type="button" aria-label="Закрыть карту"></button>
   </div>
 
-  <div class="modal modal-question">
-    <form method="POST" action="#">
-      <div>
-        <label for="user-name">Ваше имя:</label>
-        <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
+  <div class="modal-question modal">
+    <form class="question" method="POST" action="#">
+      <div class="question-item">
+        <label for="user">Ваше имя:</label>
+        <input type="text" id="user" name="user-name" placeholder="Имя Фамилия">
       </div>
-      <div>
+      <div class="question-item">
         <label for="email">Ваш e-mail:</label>
         <input type="email" id="email" name="email" placeholder="email@example.com">
       </div>
-      <div>
-        <label for="user-text" aria-label="Текст письма, в свободной форме:">Текст письма:</label>
+      <div class="question-item">
+        <label for="user-text" aria-label="Текст письма, в свободной форме">Текст письма:</label>
         <textarea id="user-text" name="user-text" placeholder="В свободной форме"></textarea>
       </div>
-      <button type="submit">Отправить</button>
+      <button class="btn question-send" type="submit">Отправить</button>
     </form>
-    <div>
-      <button type="button" aria-label="Закрыть"></button>
-    </div>
+    <div class="question-bottom"></div>
+    <button class="modal-question-exit" type="button" aria-label="Закрыть">
+      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
+    </button>
   </div>
 </body>
 
