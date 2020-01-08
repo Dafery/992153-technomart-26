@@ -53,7 +53,6 @@ html {
   background-color: #f4f7f9;
   margin: 0;
   padding: 0;
-  margin-bottom: 59px;
 }
 
 .header-top,
@@ -383,6 +382,10 @@ input[type="search"]::-moz-placeholder {
   background-color: #1d2739;
 }
 
+.main-page {
+  padding-top: 59px;
+}
+
 .features {
   display: flex;
   /* Не работает в IE
@@ -559,7 +562,8 @@ input[type="search"]::-moz-placeholder {
   padding-left: 3px;
 }
 
-.slider::before {
+
+/* .slider::before {
   content: "";
   position: absolute;
   width: 22px;
@@ -581,10 +585,29 @@ input[type="search"]::-moz-placeholder {
   background-image: url("../img/image/icon-right.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+} */
+
+.slider-control {
+  position: absolute;
+  width: 22px;
+  height: 40px;
+  top: 114px;
+  border: none;
+  background-color: rgba( 0, 0, 0, 0);
 }
 
 .slide-left {
-  top: 50px;
+  left: 25px;
+  background-image: url("../img/image/icon-left.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.slide-right {
+  right: 20px;
+  background-image: url("../img/image/icon-right.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .btn {
@@ -670,6 +693,7 @@ input[type="search"]::-moz-placeholder {
   border-bottom: 1px solid #293449;
   margin: 0;
   padding: 0;
+  padding-top: 14px;
   padding-left: 23px;
   min-height: 62px;
 }
@@ -680,23 +704,16 @@ input[type="search"]::-moz-placeholder {
   color: #fff;
 }
 
-.services-active {
-  color: #32425c;
-  background-color: #fff;
-  border: none;
-}
-
 .services-item:active {
   color: #32425c;
   background-color: #fff;
+  border: #fff;
 }
 
-.block-title {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
+.services-active {
   color: #32425c;
-  text-transform: uppercase;
+  background-color: #fff;
+  border: #fff;
 }
 
 .line {
@@ -726,9 +743,9 @@ input[type="search"]::-moz-placeholder {
   margin-bottom: 32px;
 }
 
-.btn-cart {
+.cart-img {
+  width: 300px;
   height: 158px;
-  border: 0;
   margin: 0;
   padding: 0;
   margin-bottom: 40px;
@@ -826,29 +843,55 @@ input[type="search"]::-moz-placeholder {
 
 .min-price,
 .max-price {
+  width: 95px;
+  min-height: 38px;
   font-size: 17px;
   line-height: 18px;
+  text-align: center;
   color: #000;
   text-transform: uppercase;
   border: none;
-  width: 95px;
-  padding: 0;
-  text-align: center;
+  padding-left: 19px;
+  padding-bottom: 4px;
 }
 
 .range-block {
+  height: 80px;
   text-align: center;
   margin: 0;
   padding: 0;
   margin-bottom: 9px;
-  height: 80px;
 }
 
+.range {
+  position: relative;
+  width: 180px;
+  margin-top: 30px;
+}
 
-/* Только с установлением высоты самому элем. текст становится верт. по-центру
-  .range {
-    height: 80px;
-  } */
+.range::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 22px;
+  background-image: url("../img/image/filter-button.svg");
+}
+
+.range::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 20px;
+  height: 22px;
+  background-image: url("../img/image/filter-button.svg");
+}
+
+.dash {
+  margin-top: 11px;
+}
 
 .sorting {
   display: flex;
@@ -880,53 +923,13 @@ input[type="search"]::-moz-placeholder {
   padding: 0;
 }
 
-.sorting-control {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 43px;
-  margin: 0;
-  padding: 0;
-}
-
-.control-up,
-.control-down {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.control-up {
-  width: 11px;
-  height: 10px;
-  background: url("../img/image/icon-up-dir.svg") center no-repeat;
-}
-
-.control-down {
-  width: 11px;
-  height: 10px;
-  background: url("../img/image/icon-down-dir.svg") center no-repeat;
-}
-
 .sorting-link:hover,
 .sorting-link:focus {
   color: #000;
   border-bottom: 1px solid #ee3643;
 }
 
-
-/* Как сделать svg-файл нужного мне цвета? */
-
-.control-up:hover,
-.control-down:hover,
-.control-up:focus,
-.control-down:focus {
-  color: #000;
-}
-
-.sorting-link:active,
-.control-up:active,
-.control-down:active {
+.sorting-link:active {
   color: #ee3643;
   border: none;
 }
@@ -934,6 +937,39 @@ input[type="search"]::-moz-placeholder {
 .sorting-active {
   color: #ee3643;
   border: none;
+}
+
+.sorting-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 43px;
+  height: 12px;
+  padding: 0;
+  margin-top: 2px;
+  margin-right: 6px;
+}
+
+.control-up,
+.control-down {
+  width: 11px;
+  height: 10px;
+  border: none;
+  background-color: rgba( 0, 0, 0, 0);
+}
+
+.sorting-btn path {
+  fill: #c5c5c5;
+}
+
+.sorting-btn:hover path,
+.sorting-btn:focus path {
+  fill: #231f20;
+}
+
+.sorting-btn:active path,
+.sorting-active path {
+  fill: #ee3643;
 }
 
 .filter-title {
@@ -1004,7 +1040,8 @@ input[type="search"]::-moz-placeholder {
 .catalog-item-inner {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* Не работает в IE
+  justify-content: space-between; */
   width: 160px;
   min-height: 136px;
   padding: 0;
@@ -1016,13 +1053,14 @@ input[type="search"]::-moz-placeholder {
 
 .catalog-link {
   color: #000;
+  margin-bottom: 7px;
 }
 
 .catalog-title {
+  width: 158px;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
-  width: 158px;
   margin: 0;
   padding: 0;
   margin-right: auto;
@@ -1031,6 +1069,7 @@ input[type="search"]::-moz-placeholder {
 }
 
 .old-price {
+  min-height: 31px;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
@@ -1059,49 +1098,6 @@ input[type="search"]::-moz-placeholder {
   margin-left: 13px;
   padding-top: 11px;
   padding-right: 3px;
-}
-
-.button {
-  font-size: 14px;
-  line-height: 18px;
-  border: none;
-  text-transform: uppercase;
-  min-height: 38px;
-  margin-bottom: 8px;
-  padding-top: 3px;
-  padding-left: 10px;
-  border-radius: 2px;
-}
-
-.btn-buy {
-  color: #fff;
-  background-color: #63a63e;
-  border-bottom: 3px solid #367315;
-}
-
-.btn-to-bookmarks {
-  color: #32425c;
-  background-color: #fff;
-  border: 3px solid #63a63e;
-}
-
-.btn-buy:hover,
-.btn-buy:focus {
-  background-color: #5fbb2d;
-}
-
-.btn-buy:active {
-  background-color: #518534;
-}
-
-.btn-to-bookmarks:hover,
-.btn-to-bookmarks:focus {
-  border-color: #32425c;
-}
-
-.btn-to-bookmarks:active {
-  border-color: #c1c6ce;
-  color: rgba(50, 66, 92, 0.3);
 }
 
 .pagination-list {
@@ -1622,6 +1618,91 @@ input[type="search"]::-moz-placeholder {
   border: 1px solid #e5e5e5;
 }
 
+.actions {
+  position: absolute;
+  font-family: "Cuprum", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* Не работает в IE
+  justify-content: center; */
+  top: 0;
+  left: 0;
+  width: 218px;
+  height: 170px;
+  background-color: #fff;
+  padding: 0;
+  padding-top: 43px;
+  padding-bottom: 40px;
+}
+
+.button {
+  width: 135px;
+  min-height: 38px;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin-right: auto;
+  margin-bottom: 8px;
+  margin-left: auto;
+  padding-top: 3px;
+  padding-left: 10px;
+}
+
+.btn-buy {
+  position: relative;
+  color: #fff;
+  background-color: #63a63e;
+  border-bottom: 3px solid #367315;
+}
+
+.btn-buy::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/image/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.btn-to-bookmarks {
+  color: #32425c;
+  background-color: #fff;
+  border: 3px solid #63a63e;
+}
+
+.btn-buy:hover,
+.btn-buy:focus {
+  background-color: #5fbb2d;
+}
+
+.btn-buy:active {
+  background-color: #518534;
+}
+
+.btn-to-bookmarks:hover,
+.btn-to-bookmarks:focus {
+  border-color: #32425c;
+}
+
+.btn-to-bookmarks:active {
+  border-color: #c1c6ce;
+  color: rgba(50, 66, 92, 0.3);
+}
+
+.catalog-item .actions {
+  display: none;
+}
+
+.catalog-item:hover .actions {
+  display: block;
+}
+
 .materials::after,
 .goods-list .catalog-item:nth-of-type(4)::after,
 .catalog-list .catalog-item:nth-of-type(3)::after,
@@ -1644,19 +1725,6 @@ input[type="search"]::-moz-placeholder {
 
 .catalog-item:nth-child(3n) {
   margin-right: 0;
-}
-
-.block-button {
-  font-family: "Cuprum", Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 135px;
-  margin: 0;
-  margin-top: 3px;
-  margin-right: auto;
-  margin-left: auto;
-  min-height: 172px;
 }
 
 .goods {
@@ -1733,6 +1801,16 @@ input[type="search"]::-moz-placeholder {
   padding-right: 1px;
 }
 
+.brands-item:hover,
+.brands-item:focus {
+  box-shadow: 0 10px 25px rgba( 41, 52, 73, 0.5);
+}
+
+.brands-item:active {
+  box-shadow: 0 4px 10px rgba( 41, 52, 73, 0.5);
+  opacity: 0.3;
+}
+
 .services-text {
   width: 400px;
   margin: 0;
@@ -1748,22 +1826,104 @@ input[type="search"]::-moz-placeholder {
 }
 
 .services-list {
+  position: relative;
   width: 240px;
   margin: 0;
   padding: 0;
   margin-right: 80px;
 }
 
+.services-list::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 10px;
+  height: 272px;
+  background-image: url("../img/image/shadow.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .services-block {
+  position: relative;
   width: 278px;
+  min-height: 186px;
   margin: 0;
   padding: 0;
+  margin-top: -2px;
+}
+
+.block-guarantee {
+  width: 375px;
+}
+
+.block-guarantee .block-title {
+  font-style: italic;
+}
+
+.block-credit {
+  width: 280px;
+}
+
+.block-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
 }
 
 .block-text {
   margin: 0;
   padding: 0;
   margin-top: 24px;
+}
+
+.send-request {
+  width: 195px;
+  margin-top: 26px;
+}
+
+.services-block::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.block-delivery::after {
+  top: 25px;
+  right: -341px;
+  width: 468px;
+  height: 261px;
+  background-image: url("../img/image/auto.png");
+}
+
+.block-guarantee::after {
+  top: 5px;
+  right: -251px;
+  width: 389px;
+  height: 283px;
+  background-image: url("../img/image/garantee.png");
+}
+
+.block-credit::after {
+  top: 0;
+  right: -351px;
+  width: 465px;
+  height: 285px;
+  background-image: url("../img/image/credit.png");
+}
+
+.map-popup {
+  position: relative;
+  width: 980px;
+  height: 447px;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .modal-question {
@@ -1776,6 +1936,7 @@ input[type="search"]::-moz-placeholder {
   margin-right: auto;
 }
 
+.map-exit,
 .modal-question-exit,
 .item-added-exit {
   position: absolute;
@@ -1786,7 +1947,12 @@ input[type="search"]::-moz-placeholder {
   height: 20px;
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.map-exit {
+  top: 23px;
+  right: 21px;
 }
 
 .question {
