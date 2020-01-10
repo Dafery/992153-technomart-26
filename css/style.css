@@ -126,9 +126,11 @@ html {
 }
 
 
-/* .search-wrap:focus path {
-    fill: #ee3643;
-  } */
+/* Значка нету при фокусе на поиск */
+
+.search-wrap:focus path {
+  fill: #ee3643;
+}
 
 .search {
   width: 269px;
@@ -562,31 +564,6 @@ input[type="search"]::-moz-placeholder {
   padding-left: 3px;
 }
 
-
-/* .slider::before {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 40px;
-  top: 114px;
-  left: 25px;
-  background-image: url("../img/image/icon-left.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.slider::after {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 40px;
-  top: 114px;
-  right: 20px;
-  background-image: url("../img/image/icon-right.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-} */
-
 .slider-control {
   position: absolute;
   width: 22px;
@@ -716,15 +693,6 @@ input[type="search"]::-moz-placeholder {
   border: #fff;
 }
 
-.line {
-  display: inline-block;
-  vertical-align: middle;
-  width: 25px;
-  height: 2px;
-  background-color: #ee3643;
-  margin-right: 11px;
-}
-
 .transport-companies {
   margin: 0;
   padding: 0;
@@ -732,11 +700,23 @@ input[type="search"]::-moz-placeholder {
 }
 
 .transport-companies-item {
+  position: relative;
   font-size: 18px;
   line-height: 35px;
   margin: 0;
   padding: 0;
   margin-bottom: 5px;
+  padding-left: 36px;
+}
+
+.transport-companies-item::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
 }
 
 .contacts-text {
@@ -748,7 +728,7 @@ input[type="search"]::-moz-placeholder {
   height: 158px;
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .footer-page {
@@ -851,7 +831,6 @@ input[type="search"]::-moz-placeholder {
   color: #000;
   text-transform: uppercase;
   border: none;
-  padding-left: 19px;
   padding-bottom: 4px;
 }
 
@@ -941,7 +920,6 @@ input[type="search"]::-moz-placeholder {
 
 .sorting-control {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 43px;
   height: 12px;
@@ -999,28 +977,73 @@ input[type="search"]::-moz-placeholder {
 }
 
 .filter-label {
-  position: relative;
   margin-left: 18px;
 }
 
-.filter-label svg {
-  position: absolute;
-  top: -1px;
-  left: -35px;
-  background-color: #fff;
-}
-
-.filter-label:hover path,
-.filter-label:focus path {
-  fill: #b5b5b5;
-}
-
 .filter-input:disabled+label {
-  color: #e9e9e9;
+  opacity: 0.4;
 }
 
-.filter-input:disabled+label path {
-  fill: #e9e9e9;
+.filter-input {
+  display: none;
+}
+
+.filter-label,
+.radio-label {
+  position: relative;
+  padding-left: 16px;
+}
+
+.filter-label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -18px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/image/checkbox-off.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.filter-input:checked+.filter-label::before {
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/image/checkbox-on.png);
+}
+
+.filter-input:disabled+.filter-label::before,
+.filter-input:disabled+.radio-label::before {
+  opacity: 0.3;
+}
+
+.filter-input+.filter-label:hover::before {
+  background-image: url(../img/image/checkbox-off-hover.png);
+}
+
+.filter-input:checked+.filter-label:hover::before {
+  background-image: url(../img/image/checkbox-on-hover.png);
+}
+
+.radio-label::before {
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/image/radio-off.png);
+}
+
+.filter-input:checked+.radio-label::before {
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/image/radio-on.png);
+}
+
+.filter-input+.radio-label:hover::before {
+  background-image: url(../img/image/radio-off-hover.png);
+}
+
+.filter-input:checked+.radio-label:hover::before {
+  background-image: url(../img/image/radio-on-hover.png);
 }
 
 .btn-show {
@@ -1196,14 +1219,12 @@ input[type="search"]::-moz-placeholder {
 
 .inner-header-top {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .top-menu {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   width: 450px;
 }
@@ -2057,6 +2078,7 @@ input[type="search"]::-moz-placeholder {
   width: 66px;
   height: 66px;
   background-image: url("../img/image/icon-mark.svg");
+  background-repeat: no-repeat;
 }
 
 .item-added-btn {

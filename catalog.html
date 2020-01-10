@@ -87,7 +87,7 @@
     <section class="container">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-item breadcrumbs-home">
-          <a class="breadcrumbs-link" href="#" aria-label="Главная">
+          <a class="breadcrumbs-link" href="index.html" aria-label="Главная">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12"><g fill="#C1C6CE"><path d="M3 8v4h4V8h2v4h4V8L8 3.516z"/><path d="M14.831 6.365L13 4.751V0h-2v2.987L8.332.635c-.02-.017-.043-.023-.064-.037a.465.465 0 0 0-.08-.047.551.551 0 0 0-.095-.024C8.062.521 8.032.515 8 .515c-.031 0-.061.006-.092.012a.46.46 0 0 0-.095.025c-.028.011-.053.029-.08.046-.021.014-.045.02-.064.037l-6.498 5.73a.501.501 0 0 0 .33.875.497.497 0 0 0 .331-.125L8 1.677l6.169 5.438a.501.501 0 0 0 .662-.75z"/></g></svg>
           </a>
         </li>
@@ -115,9 +115,9 @@
                 <input class="range" type="range" min="0" max="30000" step="1" value="25000" aria-label="Цена">
               </div>
               <div class="price-selection">
-                <input class="min-price" type="number" value="0" aria-label="Минимальная цена">
+                <input class="min-price" type="text" value="0" aria-label="Минимальная цена">
                 <span class="dash">&#8212;</span>
-                <input class="max-price" type="number" value="30000" aria-label="Максимальная цена">
+                <input class="max-price" type="text" value="30000" aria-label="Максимальная цена">
               </div>
             </fieldset>
             <fieldset class="filter-inner">
@@ -127,38 +127,23 @@
                 <!--aria-labelledby="manufacturers"-->
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="bosch" name="bosch" checked>
-                  <label class="filter-label" for="bosch">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path fill="#c5c5c5" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#c5c5c5" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
-                  </svg>Bosch
-                </label>
+                  <label class="filter-label" for="bosch">Bosch</label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="interscol" name="interscol">
-                  <label class="filter-label" for="interscol">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path fill="#c5c5c5" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
-                  </svg>Интерскол
-                </label>
+                  <label class="filter-label" for="interscol">Интерскол</label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="makita" name="makita" checked>
-                  <label class="filter-label" for="makita">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="27" height="23" viewBox="0 0 27 23"><path fill="#c5c5c5" d="M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z"/><path fill="#c5c5c5" d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z"/>
-                  </svg>Makita
-                </label>
+                  <label class="filter-label" for="makita">Makita</label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="dewalt" name="dewalt">
-                  <label class="filter-label" for="dewalt">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path fill="#c5c5c5" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
-                  </svg>Dewalt
-                </label>
+                  <label class="filter-label" for="dewalt">Dewalt</label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="checkbox" id="hitachi" name="hitachi">
-                  <label class="filter-label" for="hitachi">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23"><path fill="#c5c5c5" d="M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z"/>
-                  </svg>Hitachi
-                </label>
+                  <label class="filter-label" for="hitachi">Hitachi</label>
                 </li>
               </ul>
             </fieldset>
@@ -166,18 +151,12 @@
               <legend class="filter-title">Питание:</legend>
               <ul class="filter-list">
                 <li class="filter-item">
-                  <input class="filter-input" type="radio" id="accum" name="power" checked>
-                  <label class="filter-label" for="accum">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><path fill="#c5c5c5" d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/><circle fill="#c5c5c5" cx="12.5" cy="12.5" r="4.5"/>
-                  </svg>Аккумуляторные
-                </label>
+                  <input class="filter-input " type="radio" id="accum" name="power" checked>
+                  <label class="filter-label radio-label" for="accum">Аккумуляторные</label>
                 </li>
                 <li class="filter-item">
                   <input class="filter-input" type="radio" id="net" name="power">
-                  <label class="filter-label" for="net">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"><path fill="#c5c5c5" d="M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z"/>
-                  </svg>Сетевые
-                </label>
+                  <label class="filter-label radio-label" for="net">Сетевые</label>
                 </li>
               </ul>
             </fieldset>
