@@ -280,10 +280,15 @@ input[type="search"]::-moz-placeholder {
   padding-left: 48px;
 }
 
-.user>svg {
+.user-name {
+  position: relative;
+  color: #000;
+}
+
+.user-name svg {
   position: absolute;
-  top: 14px;
-  left: 14px;
+  top: 3px;
+  left: -34px;
 }
 
 .user-exit {
@@ -296,17 +301,16 @@ input[type="search"]::-moz-placeholder {
   left: 36px;
 }
 
-.user:hover path,
-.user:focus path {
+.user-name:hover path,
+.user-name:focus path,
+.user-exit:hover path,
+.user-exit:focus path {
   fill: #32425c;
 }
 
-.user:active path {
+.user-name:active path,
+.user-exit:active path {
   fill: #c5c5c5;
-}
-
-.user-name {
-  color: #000;
 }
 
 .user-date {
