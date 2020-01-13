@@ -26,7 +26,10 @@ html {
   box-sizing: inherit;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+
+/* :not(:focus):not(:active) */
+
+.visually-hidden {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -125,13 +128,6 @@ html {
   opacity: 1;
 }
 
-
-/* Значка нету при фокусе на поиск */
-
-.search-wrap:focus path {
-  fill: #ee3643;
-}
-
 .search {
   width: 269px;
   height: 42px;
@@ -152,6 +148,34 @@ input[type="search"]::-webkit-input-placeholder {
 input[type="search"]::-moz-placeholder {
   color: #fff;
 }
+
+
+/* Поиск при фокусе */
+
+.search:focus {
+  color: #000;
+  background-color: #fff;
+  outline: none;
+}
+
+.search:focus::-ms-input-placeholder {
+  color: #ccc;
+}
+
+.search:focus::placeholder {
+  color: #ccc;
+}
+
+.search:focus+svg {
+  opacity: 1;
+}
+
+.search:focus+svg path {
+  fill: #ee3643;
+}
+
+
+/* Поиск при фокусе */
 
 .search:hover,
 .top-menu-link:hover,
@@ -522,6 +546,9 @@ input[type="search"]::-moz-placeholder {
 }
 
 .slider-item {
+  position: absolute;
+  display: none;
+  width: 100%;
   height: 266px;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -532,11 +559,11 @@ input[type="search"]::-moz-placeholder {
 }
 
 .slide-drill {
-  background-image: url("../img/image/layer 99.jpg");
+  background-image: url("../img/image/layer-99.jpg");
 }
 
 .slide-perforator {
-  background-image: url("../img/image/layer 100.jpg");
+  background-image: url("../img/image/layer-100.jpg");
 }
 
 .slider-title {
@@ -1583,7 +1610,6 @@ input[type="search"]::-moz-placeholder {
 
 .filters-wrap {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -1665,8 +1691,8 @@ input[type="search"]::-moz-placeholder {
   min-height: 38px;
   font-size: 14px;
   line-height: 18px;
-  border: none;
   text-transform: uppercase;
+  border: none;
   border-radius: 2px;
   margin-right: auto;
   margin-bottom: 8px;
@@ -2033,8 +2059,6 @@ input[type="search"]::-moz-placeholder {
   display: block;
   font-size: 18px;
   line-height: 18px;
-  font-weight: 700;
-  /* без жирности не подходит по виду */
   margin-bottom: 9px;
   margin-left: 1px;
 }
@@ -2122,4 +2146,63 @@ input[type="search"]::-moz-placeholder {
 
 .modal {
   display: none;
+}
+
+
+/* Проба сделать слайдер */
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  z-index: 100;
+  width: 160px;
+  height: 18px;
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  margin: 1px;
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+#product-1:checked~.slider-list .slider-item:nth-child(1),
+#product-2:checked~.slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+#product-1:checked~.slider-controls .slider-controls-item--1::before,
+#product-2:checked~.slider-controls .slider-controls-item--2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 6px;
+  height: 6px;
+  margin: -3px;
+  background-color: #ee3643;
+  border-radius: 50%;
 }
