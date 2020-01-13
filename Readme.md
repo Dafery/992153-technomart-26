@@ -1,6 +1,6 @@
 ﻿# Личный проект «Техномарт»
 
-*Студент: [Мария Абрамович](https://up.htmlacademy.ru/htmlcss/26/user/992153).
+* Студент: [Мария Абрамович](https://up.htmlacademy.ru/htmlcss/26/user/992153).
 
 * Наставник: [Анастасия Хмара](https://htmlacademy.ru/profile/id339763).
 
