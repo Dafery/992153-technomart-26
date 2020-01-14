@@ -691,39 +691,6 @@ input[type="search"]::-moz-placeholder {
   padding-bottom: 98px;
 }
 
-.services-item {
-  font-size: 21px;
-  line-height: 30px;
-  font-weight: 700;
-  color: #fff;
-  background-color: #32425c;
-  border-top: 1px solid #405069;
-  border-bottom: 1px solid #293449;
-  margin: 0;
-  padding: 0;
-  padding-top: 14px;
-  padding-left: 23px;
-  min-height: 62px;
-}
-
-.services-item:hover,
-.services-item:focus {
-  background-color: #293449;
-  color: #fff;
-}
-
-.services-item:active {
-  color: #32425c;
-  background-color: #fff;
-  border: #fff;
-}
-
-.services-active {
-  color: #32425c;
-  background-color: #fff;
-  border: #fff;
-}
-
 .transport-companies {
   margin: 0;
   padding: 0;
@@ -1869,13 +1836,6 @@ input[type="search"]::-moz-placeholder {
   margin-bottom: 70px;
 }
 
-.services-inner {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
 .services-list {
   position: relative;
   width: 240px;
@@ -1883,6 +1843,41 @@ input[type="search"]::-moz-placeholder {
   padding: 0;
   margin-right: 80px;
 }
+
+.services-item {
+  display: block;
+  min-height: 62px;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #32425c;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+  margin: 0;
+  padding: 0;
+  padding-top: 14px;
+  padding-left: 23px;
+}
+
+.services-item:hover,
+.services-item:focus {
+  background-color: #293449;
+  color: #fff;
+}
+
+.services-item:active {
+  color: #32425c;
+  background-color: #fff;
+  border: #fff;
+}
+
+
+/* .services-active {
+  color: #32425c;
+  background-color: #fff;
+  border: #fff;
+} */
 
 .services-list::after {
   content: "";
@@ -2148,9 +2143,6 @@ input[type="search"]::-moz-placeholder {
   display: none;
 }
 
-
-/* Проба сделать слайдер */
-
 .slider-controls {
   position: absolute;
   left: 50%;
@@ -2205,4 +2197,29 @@ input[type="search"]::-moz-placeholder {
   margin: -3px;
   background-color: #ee3643;
   border-radius: 50%;
+}
+
+.services-wrap {
+  position: relative;
+}
+
+.services-inner {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 320px;
+}
+
+#services-1:checked~.services-list .services-item:nth-child(1),
+#services-2:checked~.services-list .services-item:nth-child(2),
+#services-3:checked~.services-list .services-item:nth-child(3) {
+  color: #32425c;
+  background-color: #fff;
+  border: #fff;
+}
+
+#services-1:checked~.services-inner:nth-of-type(2),
+#services-2:checked~.services-inner:nth-of-type(3),
+#services-3:checked~.services-inner:nth-of-type(4) {
+  display: block;
 }
