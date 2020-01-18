@@ -26,16 +26,13 @@ html {
   box-sizing: inherit;
 }
 
-
-/* :not(:focus):not(:active) */
-
 .visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
+  position: absolute;
+  width: 1px;
+  height: 1px;
   margin: -1px;
-  border: 0 !important;
-  padding: 0 !important;
+  border: 0;
+  padding: 0;
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -1058,6 +1055,11 @@ input[type="search"]::-moz-placeholder {
   min-height: 38px;
 }
 
+.btn-show:hover,
+.btn-show:focus {
+  cursor: pointer;
+}
+
 .catalog-item-inner {
   display: flex;
   flex-direction: column;
@@ -1864,6 +1866,7 @@ input[type="search"]::-moz-placeholder {
 .services-item:focus {
   background-color: #293449;
   color: #fff;
+  cursor: pointer;
 }
 
 .services-item:active {
@@ -1871,13 +1874,6 @@ input[type="search"]::-moz-placeholder {
   background-color: #fff;
   border: #fff;
 }
-
-
-/* .services-active {
-  color: #32425c;
-  background-color: #fff;
-  border: #fff;
-} */
 
 .services-list::after {
   content: "";
