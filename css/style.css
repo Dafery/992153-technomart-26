@@ -104,12 +104,14 @@ html {
 }
 
 .header-logo {
-  height: 47px;
+  position: absolute;
+  min-height: 47px;
   border-top: 1px solid #e03643;
 }
 
 .search-wrap {
   position: relative;
+  margin-left: 220px;
 }
 
 .search-wrap svg {
@@ -146,9 +148,6 @@ input[type="search"]::-moz-placeholder {
   color: #fff;
 }
 
-
-/* Поиск при фокусе */
-
 .search:focus {
   color: #000;
   background-color: #fff;
@@ -170,9 +169,6 @@ input[type="search"]::-moz-placeholder {
 .search:focus+svg path {
   fill: #ee3643;
 }
-
-
-/* Поиск при фокусе */
 
 .search:hover,
 .top-menu-link:hover,
@@ -262,7 +258,7 @@ input[type="search"]::-moz-placeholder {
 }
 
 .user-btn {
-  height: 45px;
+  min-height: 45px;
   font-size: 21px;
   line-height: 21px;
   color: #000;
@@ -313,13 +309,9 @@ input[type="search"]::-moz-placeholder {
 }
 
 .user-exit {
-  position: relative;
-}
-
-.user-exit svg {
   position: absolute;
-  top: 4px;
-  left: 36px;
+  top: 15px;
+  right: 10px;
 }
 
 .user-name:hover path,
@@ -421,7 +413,7 @@ input[type="search"]::-moz-placeholder {
   min-height: 409px;
   margin: 0;
   padding: 0;
-  margin-bottom: 33px;
+  margin-bottom: 30px;
 }
 
 .features-item {
@@ -431,7 +423,7 @@ input[type="search"]::-moz-placeholder {
   /* Не работает в IE
     justify-content: space-between; */
   width: 300px;
-  height: 123px;
+  min-height: 123px;
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
@@ -626,7 +618,9 @@ input[type="search"]::-moz-placeholder {
   border-radius: 3px;
   background-color: #ee3643;
   padding-top: 11px;
+  padding-right: 15px;
   padding-bottom: 9px;
+  padding-left: 15px;
 }
 
 .goods-inner,
@@ -649,7 +643,7 @@ input[type="search"]::-moz-placeholder {
 .popular-goods,
 .popular-brands {
   width: 253px;
-  height: 38px;
+  min-height: 38px;
   margin-top: 20px;
 }
 
@@ -851,6 +845,7 @@ input[type="search"]::-moz-placeholder {
   width: 20px;
   height: 22px;
   background-image: url("../img/image/filter-button.svg");
+  z-index: 1;
 }
 
 .range::after {
@@ -861,6 +856,7 @@ input[type="search"]::-moz-placeholder {
   width: 20px;
   height: 22px;
   background-image: url("../img/image/filter-button.svg");
+  z-index: 1;
 }
 
 .dash {
@@ -917,7 +913,7 @@ input[type="search"]::-moz-placeholder {
   display: flex;
   justify-content: space-between;
   width: 43px;
-  height: 12px;
+  min-height: 12px;
   padding: 0;
   margin-top: 2px;
   margin-right: 6px;
@@ -1071,7 +1067,7 @@ input[type="search"]::-moz-placeholder {
   margin: 0;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 6px;
+  margin-top: 9px;
 }
 
 .catalog-link {
@@ -1131,7 +1127,7 @@ input[type="search"]::-moz-placeholder {
   align-items: center;
   margin: 0;
   padding: 0;
-  margin-bottom: 61px;
+  margin-bottom: 62px;
   min-height: 38px;
 }
 
@@ -1214,10 +1210,11 @@ input[type="search"]::-moz-placeholder {
 
 .header-top {
   width: 100%;
-  height: 42px;
+  min-height: 42px;
 }
 
 .inner-header-top {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1233,15 +1230,14 @@ input[type="search"]::-moz-placeholder {
   font-size: 17px;
   line-height: 18px;
   width: 150px;
-  height: 42px;
-  /* Если ставлю мин-высоту, блок выпадает и становится не 42 */
+  min-height: 42px;
   padding: 0;
   padding-top: 12px;
   padding-bottom: 10px;
   padding-left: 18px;
 }
 
-.top-menu-link:last-child {
+.top-menu-link.checkout {
   padding-left: 0;
 }
 
@@ -1315,6 +1311,7 @@ input[type="search"]::-moz-placeholder {
 .header-middle {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
   margin-bottom: 39px;
@@ -1357,21 +1354,19 @@ input[type="search"]::-moz-placeholder {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 940px;
   margin: 0;
   padding: 0;
-  width: 940px;
-  /* min-height: 60px; */
 }
 
 .company-info {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  width: 940px;
+  min-height: 534px;
   padding: 0;
   padding-top: 54px;
   padding-bottom: 85px;
-  width: 940px;
-  min-height: 534px;
 }
 
 .technomart-company {
@@ -1405,7 +1400,7 @@ input[type="search"]::-moz-placeholder {
 }
 
 .footer-logo {
-  height: 68px;
+  min-height: 68px;
   margin: 0;
   padding: 0;
   margin-bottom: 28px;
@@ -1538,7 +1533,6 @@ input[type="search"]::-moz-placeholder {
 
 .breadcrumbs-list {
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   margin: 0;
   padding: 0;
@@ -1648,7 +1642,7 @@ input[type="search"]::-moz-placeholder {
   top: 0;
   left: 0;
   width: 218px;
-  height: 170px;
+  min-height: 170px;
   background-color: #fff;
   padding: 0;
   padding-top: 43px;
@@ -1668,6 +1662,7 @@ input[type="search"]::-moz-placeholder {
   margin-left: auto;
   padding-top: 3px;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 .btn-buy {
@@ -1703,6 +1698,7 @@ input[type="search"]::-moz-placeholder {
 
 .btn-buy:active {
   background-color: #518534;
+  border-color: #518534;
 }
 
 .btn-to-bookmarks:hover,
@@ -1723,11 +1719,7 @@ input[type="search"]::-moz-placeholder {
   display: block;
 }
 
-.materials::after,
-.goods-list .catalog-item:nth-of-type(4)::after,
-.catalog-list .catalog-item:nth-of-type(3)::after,
-.catalog-list .catalog-item:nth-of-type(5)::after,
-.catalog-list .catalog-item:nth-of-type(7)::after {
+.new::after {
   content: "";
   position: absolute;
   width: 60px;
@@ -1754,10 +1746,8 @@ input[type="search"]::-moz-placeholder {
 
 .goods-inner {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  /*Не работает в IE
-   align-items: center; */
+  align-items: flex-start;
   min-height: 89px;
   margin-bottom: 20px;
   padding-right: 24px;
@@ -1785,8 +1775,7 @@ input[type="search"]::-moz-placeholder {
 .brands-inner {
   display: flex;
   justify-content: space-between;
-  /*Не работает в IE
-   align-items: center; */
+  align-items: flex-start;
   min-height: 89px;
   margin-bottom: 20px;
   padding-right: 24px;
@@ -1959,23 +1948,28 @@ input[type="search"]::-moz-placeholder {
 }
 
 .map-popup {
-  position: relative;
+  position: fixed;
+  top: 60px;
+  left: 50%;
   width: 980px;
   height: 447px;
   margin: 0;
   padding: 0;
-  margin-right: auto;
-  margin-left: auto;
+  margin-left: -490px;
+  z-index: 1;
 }
 
 .modal-question {
-  position: relative;
+  position: fixed;
+  top: 271px;
+  left: 50%;
   width: 620px;
   min-height: 430px;
+  background-color: #fff;
   border-top: 6px solid #ff5357;
   box-shadow: 0 20px 40px rgba( 0, 0, 0, 0.75);
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: -310px;
+  z-index: 1;
 }
 
 .map-exit,
@@ -1990,6 +1984,7 @@ input[type="search"]::-moz-placeholder {
   margin: 0;
   padding: 0;
   background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
 }
 
 .map-exit {
@@ -2046,6 +2041,11 @@ input[type="search"]::-moz-placeholder {
   padding-left: 14px;
 }
 
+.question-item input:focus,
+.question-item textarea:focus {
+  color: #000;
+}
+
 .question-item label {
   display: block;
   font-size: 18px;
@@ -2063,21 +2063,24 @@ input[type="search"]::-moz-placeholder {
 
 .question-bottom {
   background-color: #f4f4f4;
-  height: 112px;
+  min-height: 112px;
   margin: 0;
   padding: 0;
 }
 
 .item-added {
-  position: relative;
+  position: fixed;
+  top: 392px;
+  left: 50%;
   width: 620px;
   min-height: 282px;
+  background-color: #fff;
   border-top: 6px solid #ff5357;
   box-shadow: 0 20px 40px rgba( 41, 52, 73, 0.75);
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: -310px;
   padding: 0;
   padding-top: 36px;
+  z-index: 1;
 }
 
 .item-text {
@@ -2135,15 +2138,11 @@ input[type="search"]::-moz-placeholder {
   border-radius: 3px;
 }
 
-.modal {
-  display: none;
-}
-
 .slider-controls {
   position: absolute;
   left: 50%;
   bottom: 36px;
-  z-index: 100;
+  z-index: 1;
   width: 160px;
   height: 18px;
   text-align: center;
@@ -2218,4 +2217,50 @@ input[type="search"]::-moz-placeholder {
 #services-2:checked~.services-inner:nth-of-type(3),
 #services-3:checked~.services-inner:nth-of-type(4) {
   display: block;
+}
+
+.modal {
+  display: none;
+}
+
+.modal-show {
+  display: block;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+.map-popup img {
+  position: absolute;
+  margin: 0;
+}
+
+.map-popup iframe {
+  position: absolute;
+  border: none;
+  top: 15px;
+  left: 20px;
+  z-index: 1;
 }
