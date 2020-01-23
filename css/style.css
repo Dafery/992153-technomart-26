@@ -407,8 +407,6 @@ input[type="search"]::-moz-placeholder {
 
 .features {
   display: flex;
-  /* Не работает в IE
-   justify-content: space-between; */
   flex-wrap: wrap;
   min-height: 409px;
   margin: 0;
@@ -420,8 +418,6 @@ input[type="search"]::-moz-placeholder {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* Не работает в IE
-    justify-content: space-between; */
   width: 300px;
   min-height: 123px;
   margin: 0;
@@ -879,7 +875,6 @@ input[type="search"]::-moz-placeholder {
   justify-content: space-between;
   margin-bottom: 20px;
   padding-right: 17px;
-  /* Для IE, так как align-items:center; не работает*/
   padding-top: 10px;
 }
 
@@ -1048,6 +1043,8 @@ input[type="search"]::-moz-placeholder {
 }
 
 .btn-show {
+  width: 140px;
+  min-height: 38px;
   font-size: 13px;
   line-height: 18px;
   text-align: center;
@@ -1057,8 +1054,7 @@ input[type="search"]::-moz-placeholder {
   margin: 0;
   padding: 0;
   margin-top: 37px;
-  width: 140px;
-  min-height: 38px;
+  border-radius: 2px;
 }
 
 .btn-show:hover,
@@ -1069,8 +1065,6 @@ input[type="search"]::-moz-placeholder {
 .catalog-item-inner {
   display: flex;
   flex-direction: column;
-  /* Не работает в IE
-  justify-content: space-between; */
   width: 160px;
   min-height: 136px;
   padding: 0;
@@ -1131,7 +1125,6 @@ input[type="search"]::-moz-placeholder {
 
 .pagination-list {
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: center;
@@ -1404,7 +1397,6 @@ input[type="search"]::-moz-placeholder {
 
 .footer-top {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   min-height: 193px;
 }
@@ -1431,7 +1423,6 @@ input[type="search"]::-moz-placeholder {
 
 .footer-list {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
   padding: 0;
@@ -1455,7 +1446,6 @@ input[type="search"]::-moz-placeholder {
 
 .footer-bottom-inner {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -1469,7 +1459,6 @@ input[type="search"]::-moz-placeholder {
 
 .social-list {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
@@ -1647,8 +1636,6 @@ input[type="search"]::-moz-placeholder {
   font-family: "Cuprum", Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  /* Не работает в IE
-  justify-content: center; */
   top: 0;
   left: 0;
   width: 218px;
