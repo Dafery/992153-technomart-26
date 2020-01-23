@@ -790,6 +790,7 @@ input[type="search"]::-moz-placeholder {
   padding: 0;
   margin: 0;
   padding-left: 19px;
+  border-radius: 2px;
 }
 
 .name-filter {
@@ -821,42 +822,52 @@ input[type="search"]::-moz-placeholder {
   text-transform: uppercase;
   border: none;
   padding-bottom: 4px;
+  border-radius: 2px;
 }
 
 .range-block {
+  position: relative;
   height: 80px;
-  text-align: center;
   margin: 0;
   padding: 0;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-bottom: 9px;
+  border-radius: 3px;
 }
 
-.range {
-  position: relative;
-  width: 180px;
-  margin-top: 30px;
+.scale {
+  height: 2px;
+  background: #d7dcde;
 }
 
-.range::before {
-  content: "";
+.bar {
+  width: 160px;
+  height: 2px;
+  background: #00ca74;
+}
+
+.toggle {
   position: absolute;
-  top: 0;
+  top: 30px;
   left: 0;
   width: 20px;
-  height: 22px;
-  background-image: url("../img/image/filter-button.svg");
-  z-index: 1;
+  height: 20px;
+  padding: 0;
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.range::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 20px;
-  width: 20px;
-  height: 22px;
-  background-image: url("../img/image/filter-button.svg");
-  z-index: 1;
+.toggle-min {
+  left: 20px;
+}
+
+.toggle-max {
+  left: 160px;
 }
 
 .dash {
@@ -865,7 +876,6 @@ input[type="search"]::-moz-placeholder {
 
 .sorting {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin-bottom: 20px;
   padding-right: 17px;
@@ -2054,18 +2064,20 @@ input[type="search"]::-moz-placeholder {
   margin-left: 1px;
 }
 
-.question-send {
-  position: absolute;
-  bottom: -86px;
-  width: 100%;
-  border: 0;
-}
-
 .question-bottom {
   background-color: #f4f4f4;
+  width: 100%;
   min-height: 112px;
   margin: 0;
   padding: 0;
+}
+
+.question-send {
+  position: absolute;
+  bottom: -86px;
+  left: 0;
+  width: 100%;
+  border: 0;
 }
 
 .item-added {
@@ -2261,6 +2273,6 @@ input[type="search"]::-moz-placeholder {
   position: absolute;
   border: none;
   top: 15px;
-  left: 20px;
+  left: 15px;
   z-index: 1;
 }
