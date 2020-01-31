@@ -78,3 +78,19 @@ window.addEventListener("keydown", function(evt) {
     }
   }
 });
+
+ymaps.ready(init);
+
+function init() {
+  var myMap = new ymaps.Map("map", {
+    center: [59.938631, 30.323055],
+    zoom: [16]
+  });
+
+  var placemark = new ymaps.Placemark([59.938631, 30.323055], {
+    balloonContent: "г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8",
+    hintContent: "г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8"
+  });
+  myMap.geoObjects.add(placemark);
+  placemark.balloon.open();
+}

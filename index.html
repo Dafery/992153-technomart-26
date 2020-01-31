@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=79fb2d31-106f-4fe8-bf81-5933ef7c03a9&lang=ru_RU" type="text/javascript">
+  </script>
 </head>
 
 <body class="inner-page">
@@ -106,8 +108,8 @@
         <input class="visually-hidden" type="radio" id="product-1" name="toggle">
         <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>
         <div class="slider-controls">
-          <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый</label>
-          <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй</label>
+          <label class="slider-controls-item slider-controls-item--1" for="product-1">Первый слайд</label>
+          <label class="slider-controls-item slider-controls-item--2" for="product-2">Второй слайд</label>
         </div>
         <ul class="slider-list">
           <li class="slider-item slide-perforator">
@@ -393,7 +395,7 @@
   </footer>
 
   <div class="map-popup modal">
-    <iframe src="https://yandex.by/map-widget/v1/-/CKEAf42L" width="940" height="452" frameborder="1" allowfullscreen="true"></iframe>
+    <div class="my-map" id="map"></div>
     <img src="img/image/map-popup.png" width="1736" height="779" alt="г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8">
     <button class="map-exit" type="button" aria-label="Закрыть карту">
       <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>

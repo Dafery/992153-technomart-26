@@ -2251,25 +2251,27 @@ input[type="search"]::-moz-placeholder {
   margin: 0;
 }
 
-.map-popup iframe {
+.map-popup .my-map {
   position: absolute;
   border: none;
   top: 15px;
   left: 15px;
+  width: 940px;
+  height: 452px;
   z-index: 1;
 }
 
 input:focus+label::before {
-  outline: 2px solid #67bef5;
+  opacity: 1;
 }
 
 #product-1:focus~.slider-controls .slider-controls-item--1::after,
 #product-2:focus~.slider-controls .slider-controls-item--2::after {
-  outline: 2px solid #67bef5;
+  opacity: 1;
 }
 
 #services-1:focus~.services-list .services-item:nth-child(1),
 #services-2:focus~.services-list .services-item:nth-child(2),
 #services-3:focus~.services-list .services-item:nth-child(3) {
-  outline: 2px solid #67bef5;
+  opacity: 1;
 }
